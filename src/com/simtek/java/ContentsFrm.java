@@ -11,6 +11,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EtchedBorder;
 
 public class ContentsFrm extends JFrame implements ActionListener {
+	private AddNumFrm addNumFrm;
 	private JButton addNumBtn;
 	
 	
@@ -52,6 +53,10 @@ public class ContentsFrm extends JFrame implements ActionListener {
 		
 		if (src == addNumBtn) {
 			System.out.println("Add Numbers!!");
+			if (addNumFrm == null) {
+				addNumFrm = new AddNumFrm();
+			} 
+			addNumFrm.setVisible(true);
 		}
 		
 	}
